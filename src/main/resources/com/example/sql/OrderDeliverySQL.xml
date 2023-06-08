@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.OrderDeliveryDAO">
+	<select id="my_all_list" resultType="com.example.java.OrderDeliveryDTO">
+		<![CDATA[
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from odl 
+                           where o_date >= #{param2} and o_date <= #{param3}
+                             and m_id = #{param1}
+                           order by o_date desc
+                        ) a
+         	      where rownum < ( #{param4} * 5 ) + 1 
+         	   )
+ 		 where r_ >= ((#{param4} - 1) * 5 ) + 1
+		 ]]>
+	</select>
+	<select id="my_select_list" resultType="com.example.java.OrderDeliveryDTO">
+		<![CDATA[
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from odl 
+                           where o_date >= #{param2} and o_date <= #{param3}
+                           	 and o_ps = #{param4}
+                             and m_id = #{param1}
+                           order by o_date desc
+                        ) a
+         	      where rownum < ( #{param5} * 5 ) + 1 
+         	   )
+ 		 where r_ >= ((#{param5} - 1) * 5 ) + 1
+		 ]]>
+	</select>
+	<select id="my_order_all_count" resultType="_int">
+		<![CDATA[
+		select count(*)
+		from odl
+		where o_date >= #{param2} and o_date <= #{param3}
+		  and m_id = #{param1}
+		]]>
+	</select>
+	<select id="my_order_select_count" resultType="_int">
+		<![CDATA[
+		select count(*)
+		from odl
+		where o_date >= #{param2} and o_date <= #{param3}
+		  and o_ps = #{param4}
+		  and m_id = #{param1}
+		]]>
+	</select>
+	<select id="order_detail_paid_list" resultType="com.example.java.OrderDeliveryDTO">
+		select * 
+		from odl 
+		where o_no = #{param1}
+	</select>
+	<select id="identification_check" resultType="com.example.java.OrderDeliveryDTO">
+		select o_no, m_id 
+		from odl 
+		where o_no = #{param1}
+		group by o_no, m_id
+	</select>
+	<insert id="odl_insert">
+		insert into odl 
+		values(
+		#{param1}, to_Char(sysdate,'YYYY-MM-DD'),
+		to_Char(sysdate,'YYMMDDHHmiss')||#{param11},
+		#{param2}, #{param3}, #{param4}, #{param5},'배송준비중', #{param6},
+		#{param7}, #{param8}, #{param9}, #{param10})
+	</insert>
+</mapper>

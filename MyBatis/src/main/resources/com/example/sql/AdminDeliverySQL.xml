@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.AdminDeliveryDAO">
+	<select id="dm_allCount" resultType="string">
+		select count(*)
+		from odl
+		where m_id = #{param1}
+		and replace(o_date, '-', '') between #{param2} and #{param3}
+	</select>
+	<select id="dm_selectCount" resultType="string">
+		select count(*)
+		from odl
+		where m_id = #{param1}
+		and o_ps = #{param2}
+		and replace(o_date, '-', '') between #{param3} and #{param4}
+	</select>
+	<select id="dm_getDataAll" resultType="com.example.java.OrderDeliveryDTO">
+		<![CDATA[
+			select *
+	  		  from ( select a.*, rownum r_
+	                   from ( select * 
+	                            from odl 
+	                           where replace(o_date, '-', '') between #{param2} and #{param3}
+	                             and m_id = #{param1}
+	                        ) a
+	         	      where rownum < ( #{param4} * 5 ) + 1 
+	         	   )
+	 		 where r_ >= ((#{param4} - 1) * 5 ) + 1
+		 ]]>
+	</select>
+	<select id="dm_getDataByUserID" resultType="com.example.java.OrderDeliveryDTO">
+		<![CDATA[
+			select *
+	  		  from ( select a.*, rownum r_
+	                   from ( select * 
+	                            from odl 
+	                           where replace(o_date, '-', '') between #{param2} and #{param3}
+	                           	 and o_ps = #{param4}
+	                             and m_id = #{param1}
+	                        ) a
+	         	      where rownum < ( #{param5} * 5 ) + 1 
+	         	   )
+	 		 where r_ >= ((#{param5} - 1) * 5 ) + 1
+		 ]]>
+	</select>
+	<update id="dm_updateUserODL">
+		update odl
+		set
+			o_ps = #{param2}
+		where o_no = #{param1}
+	</update>
+</mapper>

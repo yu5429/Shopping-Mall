@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.java.AdminMemberDAO">
+	<select id="admin_member_getAllLength" resultType="string">
+		select count(*) r
+		from member
+	</select>
+	<select id="admin_member_getAllMember" resultType="com.example.java.MemberDTO">
+		<![CDATA[
+			select *
+			from (
+				select a.*, rownum r
+				from (select id,realname,nickname,gender,address,phone,email
+				      from member
+				      order by id
+				      ) a
+				where rownum <= #{param1} * 8
+				)
+			where r >= (#{param1} - 1) * 8 + 1
+		]]>		
+	</select>
+	<update id="admin_member_update">
+		update member
+		set phone=#{param2}, email=#{param3} 
+		where id=#{param1} 
+	</update>
+	<delete id="admin_member_delete">
+		delete from member
+		where id=#{param1} 
+	</delete>
+	<select id="admin_member_getSpecLength" resultType="string">
+		select count(*)
+		from member
+		where id like '%'||#{param1}||'%'
+		or nickname like '%'||#{param1}||'%'
+		or phone like '%'||#{param1}||'%'
+		or email like '%'||#{param1}||'%'
+		order by id
+	</select>
+	<select id="admin_member_search" resultType="com.example.java.MemberDTO">
+		<![CDATA[
+			select *
+			from (
+				select a.*, rownum r
+				from (select id,realname,nickname,gender,address,phone,email
+			  		  from member
+			  		  where id like '%'||#{param2}||'%'
+					  or nickname like '%'||#{param2}||'%'
+					  or phone like '%'||#{param2}||'%'
+					  or email like '%'||#{param2}||'%'
+					  order by id
+					  ) a
+		   		where rownum <= #{param1} * 8
+		   		)
+		   	where r >= (#{param1} - 1) * 8 + 1
+		]]>
+	</select>
+</mapper>

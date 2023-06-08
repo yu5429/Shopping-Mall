@@ -1,0 +1,102 @@
+/* 0412css추가 */
+h1 {
+	font-size: 37px;
+	margin: 0 0 70px 0;
+	
+}
+
+
+
+
+
+#article_loginbox {
+	margin-top: 100px;
+}
+
+#input_loginPW {
+	top: 30px;
+}
+
+
+
+/* 0412css추가 */
+#button_login {
+	top: 50px;
+    width: 350px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #222;
+    border-bottom-color: #222;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.04);
+    text-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom,#333333 0%,#222222 100%);
+    font-size: 18px;
+}
+
+
+
+
+
+
+#div_loginUpper {
+	position: relative;
+}
+
+#div_loginAhrefBox {
+	position: relative;
+	top: 75px;
+	font-size: 16px;
+	margin-bottom: 140px;
+}
+
+
+
+
+
+/* 0412css추가 */
+#div_loginAhrefBox a {
+	background: url(/img/ui/ico_bar2.gif) no-repeat 0 50%;
+	padding: 0 15px;
+}
+
+#div_loginAhrefBox #href_signup {
+	background: none;
+	padding-right: 6px;
+}
+
+#div_loginAhrefBox #href_findID {
+	padding-right: 6px;
+}
+
+
+
+
+
+
+
+
+
+.a_loginAhref {
+	position: relative;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* 0412css추가 */
+.input_login {
+	position: relative;
+	width: 350px;
+	height: 50px;
+	padding: 0 20px;
+	font-size: 14px;
+	border: 1px solid #eaeaea;
+	outline: none;
+}

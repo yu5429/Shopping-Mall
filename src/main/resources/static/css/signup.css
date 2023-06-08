@@ -1,0 +1,164 @@
+/* 0412css추가 */
+h1 {
+	font-size: 25px;
+    margin: 0 0 70px;
+}
+
+/* 0412css추가 */
+h3 {
+	text-align: left;
+	margin: 0 0 -30px 0;
+}
+
+/* 0412css추가 */
+#table_signInfo {
+	border-collapse: collapse;
+}
+article {
+	width: fit-content;
+	margin: auto;
+}
+
+
+
+
+
+#table_signInfo td {
+	border: solid 1px black;
+	height: fit-content;
+	
+	
+	/* css 변경 및 추가 */
+	width: 400px;
+	position: relative;
+	padding: 20px 60px 20px 15px;
+}
+
+#table_signInfo th {
+	border: solid 1px black;
+	width: 130px;
+	height: fit-content;
+}
+
+
+
+
+#input_signupDB {
+	position: relative;
+
+
+	/* css 변경 및 left속성 삭제 */
+	width: 100px;
+}
+
+
+
+
+/* 0412css추가 */
+#div_button {
+	text-align: initial;
+}
+
+.submit {
+	position: relative;
+    top: 20px;
+    cursor: pointer;
+	/* 0412css추가 및 변경 */
+    width: 169px;
+    height: 50px;
+    left: 179px;
+    color: #fff;
+    border: 1px solid #222;
+    text-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom,#333333 0%,#222222 100%);
+    font-size: 18px;
+}
+
+#button_findPostcode {
+	position: absolute;
+    top: 25px;
+    cursor: pointer;
+    
+    
+    /* 0412css추가 및 변경 */
+    left: 181px;
+    width: 104px;
+    height: 44px;
+}
+
+
+.input_signupPhone::-webkit-outer-spin-button,
+.input_signupPhone::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_login {
+	position: relative;
+	width: 250px;
+	height: 25px;
+}
+
+.input_signup {
+	position: relative;
+    top: 5px;
+    
+    
+    /* 0412css추가 및 left속성 삭제 */
+    width: 310px;
+    height: 40px;
+    padding: 20px;
+}
+
+
+/* 0412css추가 */
+#input_signupPC {
+	width: 150px;
+    position: relative;
+}
+
+/* 0412css추가 */
+#input_signupPC, #input_signupADD, #input_signupDADD, #input_signupNADD {
+	margin: 0 0 10px 0;
+	left: 6px;
+}
+
+/* 0412css추가 및 변경 */
+.input_signupPhone, .span_phoneSpace {
+	width: 62px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    left: -38px;
+    padding: 0;
+}
+
+/* 0412css left속성 삭제 */
+.label_gender {
+	position: relative;
+}
+
+.pre_checkMessage {
+	position: relative;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+    
+    /* 0412css추가 및 left삭제 */
+    text-align: left;
+    padding: 0 18px 0;
+}
+
+/* 0412css left속성 삭제 */
+.input_signupGender {
+	position: relative;
+}
+
+.span_phoneSpace {
+	position: relative;
+	
+	
+	/* 0412css추가 및 left속성 삭제 */
+    top: 2px;
+}

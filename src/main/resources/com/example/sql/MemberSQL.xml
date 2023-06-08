@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.MemberDAO">
+	<select id="check_duplicateID" resultType="_int">
+		select count(id)
+		from member
+		where id = #{param1}
+	</select>
+	<select id="check_duplicateNickname" resultType="_int">
+		select count(nickname)
+		from member
+		where nickname = #{param1}
+	</select>
+	<insert id="submit_signup">
+		insert into member
+		values (#{param1},#{param2},#{param3},
+		#{param4},#{param5},#{param6},
+		#{param7},#{param8},#{param9})
+	</insert>
+	<select id="search_ID" resultType="string">
+		select id
+		from member
+		where realname = #{param1}
+		and email = #{param2}
+	</select>
+	<select id="search_PW" resultType="_int">
+		select count(*)
+		from member
+		where id = #{param1}
+		and realname = #{param2}
+		and email = #{param3}
+	</select>
+	<update id="update_PW">
+		update member
+		set
+			pw = #{param4}
+		where id = #{param1}
+		and realname = #{param2}
+		and email = #{param3}
+	</update>
+	<select id="get_temporalPW" resultType="string">
+		select pw
+		from member
+		where id = #{param1}
+		and realname = #{param2}
+		and email = #{param3}
+	</select>
+	<select id="check_email" resultType="_int">
+		select count(email)
+		from member
+		where email = #{param1}
+	</select>
+	<select id="get_nickname" resultType="string">
+		select nickname
+		from member
+		where id = #{param1}
+		and pw = #{param2}
+	</select>
+	<select id="get_mypageData" resultType="com.example.java.OrderDeliveryDTO">
+		select o_ps, count(*) r_
+		from odl
+		where m_id = #{param1}
+		group by o_ps
+	</select>
+	<update id="update_signup">
+		update member
+		set
+			pw = #{param2}, realname = #{param3}, gender = #{param4}, 
+			birth = #{param5}, address = #{param6}, phone = #{param7}, email = #{param8}
+		where id = #{param1}
+	</update>
+	<select id="get_signupInfo" resultType="com.example.java.MemberDTO">
+		select *
+		from member
+		where nickname = #{param1}
+	</select>
+	<select id="check_dupleNicknameByID" resultType="string">
+		select id
+		from member
+		where nickname = #{param1}
+	</select>
+	<select id="check_emailByID" resultType="string">
+		select id
+		from member
+		where email = #{param1}
+	</select>
+	<delete id="delete_account">
+		delete member
+		where nickname = #{param1}
+		and pw = #{param2}
+	</delete>
+	<select id="check_PWforDelete" resultType="_int">
+		select count(*)
+		from member
+		where nickname = #{param1}
+		and pw = #{param2}
+	</select>
+</mapper>

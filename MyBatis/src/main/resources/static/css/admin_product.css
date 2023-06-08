@@ -1,0 +1,123 @@
+input:not([type="file"]) {
+	width: 300px;
+}
+section, footer {
+	top: 0px;
+}
+.h1{
+	text-align:center;
+	font-size:35px;
+	font-weight:bold;
+	margin:auto;
+	width:100%;
+	padding:30px 0 30px 0;
+	border-bottom: 1px solid #ccc;
+}
+.table_img{
+	width:150px;
+	height:150px;
+}
+.div_button{
+	width:100%;
+	padding:10px 10px 0 10px; 
+	text-align:right;
+	border-top: 1px solid #e7e7e7;
+}
+.button_ap{
+ 	width: 120px;
+    height: 40px;
+    line-height: 38px;
+    
+    color: black !important;
+    border: 1px solid #ccc;
+    background-color:#eef7ff;
+}
+.td_prod_img{
+	height:250px;
+}
+.page {
+	font-weight: 700;
+	cursor: pointer;
+}
+.img_p1 {
+	width: 100px;
+	height: 100px;
+	margin: 0 20px 0 20px;
+}
+.img_p2 {
+	width: 100px;
+	height: 200px;
+	margin: 0 20px 0 20px;
+}
+.div_pageIndex {
+	text-align: center;
+}
+
+
+
+#table_productList{
+	width:100vw;
+	text-align:center;
+}
+#table_productList th{
+	padding:14px 0 14px 0;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+#table_productList tr:hover td{
+	background-color: #eef7ff;
+}
+#table_productList td {
+	cursor: pointer;
+}
+#table_productView{
+	table-layout: fixed;
+	border: 1px solid black;
+	width:100%;
+	margin:auto;
+}
+#table_productView td{
+	padding:10px 0 10px 0;
+}
+#div_pageIndex ul {
+    display: inline-block;
+    padding: 0;
+    list-style-type: disc;
+}
+#div_pageIndex ul li {
+	display: inherit;
+	padding: 0;
+	margin: 0 5px;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+#li {
+	display: inline-block;
+}
+#li1-1 {
+    margin-right: 10px;
+    color: moccasin;
+    text-decoration-thickness: 3px;
+}
+#li1-2 {
+    text-decoration: none;
+}
+#table_productInsert {
+	table-layout: fixed;
+	margin: auto; 
+	text-align: center;
+}
+#table_productInsert td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#table_productInsert td:nth-child(1) {
+	padding-right: 50px;
+}
+#input_search {
+	margin: 20px 10px 20px 0;
+	padding: 10px 0 10px 0;
+	width: 300px;
+}

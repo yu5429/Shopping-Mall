@@ -1,0 +1,371 @@
+#product-image img {
+    width: 400px;
+    height: 400px;
+}
+#product-info{
+	position: relative;
+	width: 450px;
+    height: 450px;
+    left: 10vw;
+    text-align: left;
+}
+.sub-product{
+	width: 800px;
+    height: 450px;
+}
+
+.displaynone{
+	display: none;	
+}
+
+.input_pDetail {
+	position: relative;
+	left: 50px;
+	border: none;
+	outline: none;
+}
+#product-first {
+	display: inline-flex;
+}
+#btn_write_review{
+	float: right;
+}
+
+#btnBuy, #btnBasket {
+	position: relative;
+	background-color: #000000;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#btnBasket {
+	background-color: #E0E0E0;
+	color: black;
+}
+
+.board-table {
+	display: inline-block;
+	font-size: 15px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.board-table th, .board-table td {
+	padding: 14px 0;
+}
+
+.board-table td {
+	border-top: 1px solid #e7e7e7;
+	text-align: center;
+}
+#div6-1 ul li{
+	display: inline-block;
+    margin: 0 10px;
+}
+#div6-1 a{
+    position: relative;
+    left: 150px;
+    text-decoration: none;
+    color: black;
+    
+}
+#div6-1 {
+	display: none;
+	text-align: center;
+	margin-bottom: 30px;
+}
+  .star {
+    position: relative;
+    font-size: 2rem;
+    color: #ddd;
+  }
+  
+  .star input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+.star span {
+    width: 0;
+    position: absolute; 
+    left: 0;
+    color: red;
+    overflow: hidden;
+    pointer-events: none;
+  }
+ 
+  
+ .hidden {
+  display: none;
+}
+
+
+#div_writeReview {
+	display: none;
+}
+
+.myform {
+    display: inline-block;
+    direction: rtl;
+    border:0;
+}
+.myform input[type=radio]{
+    display: none;
+}
+.myform label{
+    font-size: 3em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+.myform label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.myform label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#reviewContents {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 1.5px #D3D3D3;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+#product_count {
+	position: relative;
+	width: 40px;
+	height: 20px;
+	left: 85px;
+	text-align: center;
+	font-size: 15px;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom :2px solid black;
+}
+
+#form_button {
+	position: relative;
+	top: 33px;
+}
+
+#total_price {
+	position: relative;
+	left: 125px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #FF6666;
+	text-align: center;
+	border: none;
+}
+
+.div_rlt {
+	position: relative;
+	top: -22px;
+	left: 130px;
+	width:300px;
+}
+
+.review-list-title, .review-list-nickname {
+	border: none;
+	outline: none;
+	text-align: left;
+	font-size: 15px;
+	font-weight: bold;
+	width: fit-content;
+}
+
+.review-list-title {
+	position: relative;
+	top: -20px;
+	left: 40px;
+	width: 300px;
+}
+
+.review_list_content {
+	border: none;
+	outline: none;
+	resize: none;
+	width: 300px;
+	height: 100px;
+	background-color: #f5f5f5;
+	padding: 10px;
+	font-weight:bold;
+}
+
+.dtrw_button {
+	margin: 0 10px 0 10px;
+}
+
+.div_reviewTD {
+	position: relative;
+	margin: 0 0 30px 0;
+}
+
+.pre_reviewArrows {
+	background: black;
+	color: white;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.div_toggleNickname {
+	position: relative;
+	top: -40px;
+}
+
+.div_contentBox {
+	position: relative;
+	top: -20px;
+}
+
+#div_goto {
+	position: relative;
+	top: 15px;
+}
+
+#divMS, #divYS {
+	display: flex;
+}
+
+#divMS li {
+	color: transparent;
+	text-shadow: 0 0 0 #f0f0f0;
+}
+
+.mystar {
+	color:transparent; 
+	text-shadow: 0 0 0 #f0f0f0;
+	cursor: pointer;
+}
+#nickname {
+	position: relative; 
+	left: 10px; 
+	border:none; 
+	font-size: 17px; 
+	font-weight: bold; 
+	text-align: left;
+	outline: none;
+}
+#nft_pd {
+	left: 17vw;
+	width: 70vw;
+	text-align: center;
+}
+
+
+
+
+.btnInfo{
+	background-color: #ffffff;
+	font-size: 20px;
+	color: #6b6b6b; /* 버튼 글자색 */
+  border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom :3px solid #ffffff;
+  padding: 10px 20px; /* 버튼 안쪽 여백 */
+	margin: 0 10px; /* 버튼 간격 설정 */
+	font-weight:bold;
+	
+}
+.btnReview{
+	background-color: #ffffff;
+	font-size: 20px;
+	color: #6b6b6b; /* 버튼 글자색 */
+  border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom :3px solid #ffffff;
+  padding: 10px 20px; /* 버튼 안쪽 여백 */ 
+	margin: 0 10px; /* 버튼 간격 설정 */
+	font-weight:bold;
+}
+.btnQna{
+	background-color: #ffffff;
+	font-size: 20px;
+	color: #6b6b6b; /* 버튼 글자색 */
+    border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom :3px solid #ffffff;
+  padding: 10px 20px; /* 버튼 안쪽 여백 */
+	margin: 0 10px; /* 버튼 간격 설정 */
+	font-weight:bold;
+}
+.btnInfo:hover {
+  color: #000; /* 버튼 글자색 검정색으로 변경 */
+  border-bottom: 3px solid #333; /* 버튼 아래쪽에 검은색 선 추가 */
+}
+.btnReview:hover {
+  color: #000; /* 버튼 글자색 검정색으로 변경 */
+  border-bottom: 3px solid #333; /* 버튼 아래쪽에 검은색 선 추가 */
+}
+.btnQna:hover {
+  color: #000; /* 버튼 글자색 검정색으로 변경 */
+  border-bottom: 3px solid #333; /* 버튼 아래쪽에 검은색 선 추가 */
+}
+
+.update-btn {
+	position: relative;
+	background-color: #333;
+	border: none;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+.dtrw_button {
+	position: relative;
+	background-color: #6b6b6b;
+	border: none;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+.review-info{
+	
+	text-align: left;
+	margin-left: 40px;
+	margin-right: 40px;
+	
+}
+#review_table {
+	width: 100%;
+	padding: 20px;
+}
+.div_reviewTD {	
+	border-bottom: 1px solid #c0c0c0;
+}
+#review_myTable{
+	padding: 20px;
+	width: 100%;
+}

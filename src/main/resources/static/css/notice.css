@@ -1,0 +1,129 @@
+@charset "UTF-8";
+textarea{
+	width:800px; 
+	height:400px; 
+    resize:none;
+}
+a {                                /*앵커태그 밑줄 제거*/ 
+	text-decoration: none;
+} 
+a:hover {                          /*선택한 앵커 태그 볼드체로 바꾸기*/ 
+	color : #000000; font-weight : bold; 
+}
+.notice{           
+    text-align: center;	
+	left: 5%;
+	width: 90%;
+}
+#list{           
+	display: inline-block;	
+}
+#title {
+	width: 600px;
+}
+#div_writeNotice{
+	text-align:right;
+}
+.board-table {
+  display: inline-block;
+  font-size: 15px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  table-layout: fixed;
+}
+.showList{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #c0c0c0;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}
+.showList:hover {
+  background-color: #c0c0c0;
+  color: #000000;
+}
+.board-table a {
+  color: #333;
+  display: inline-block;
+  line-height: 1.4;
+  word-break: break-all;
+  vertical-align: middle;
+}
+.board-table th, .board-table td {
+  padding: 14px 0;
+}
+
+.board-table td {
+  border-top: 1px solid #e7e7e7;
+}
+#btnInfo{                            
+  text-align: right;
+}
+.board-table th {
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+}
+#info{                           
+	text-align:left;
+}
+.button {	
+  display: inline-block;                      
+  padding: 0.5em 1em; 
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight : bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 10px;
+}
+.button:hover {        
+  background-color: #808080;
+  color: #ffffff;
+  cursor: pointer;
+}
+.subDiv{
+	position:absolute;
+	height: 25px;
+}
+#div6-1 ul li{
+	display: inline-block;
+    margin: 0 20px;
+}
+#div6-1 a{
+    position: relative;
+    left: 150px;
+    text-decoration: none;
+    color: black;
+    
+}
+#div6-1 {
+	display: none;
+	text-align: center;
+}
+ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+.left {
+	text-align: left;
+}
+.none {
+	border: none;
+	outline:none;
+}
+#input_title {
+	width: 500px;
+}
+.dnone {
+	display: none;
+}

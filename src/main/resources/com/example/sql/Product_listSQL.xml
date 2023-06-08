@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.Product_listDAO">
+	<select id="header_bigcategory" resultType="com.example.java.ProductDTO">
+		select prod_bigcategory, prod_category
+		from product
+		group by prod_bigcategory, prod_category
+		order by prod_bigcategory
+	</select>
+	<select id="product_list_all_count" resultType="_int">
+		select count(*) r_
+		  from product
+		 where prod_bigcategory = #{param1}
+	</select>
+	<select id="product_category_count" resultType="com.example.java.ProductDTO">
+		select prod_category, count(*) r_
+		  from product
+		 where prod_bigcategory = #{param1}
+		 group by prod_category
+		 order by prod_category
+	</select>
+	<select id="home_new" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from product
+                           order by prod_regdate desc
+                        ) a
+         	      where rownum <![CDATA[<]]> 9
+         	   )
+ 		 where r_ <![CDATA[>=]]> 1
+	</select>
+	<select id="product_list_normal_pageData" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from product
+                           where prod_bigcategory = #{param1}
+                           order by prod_regdate desc
+                        ) a
+         	      where rownum <![CDATA[<]]> (#{param2} * 8) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param2} - 1) * 8) + 1
+	</select>
+	<select id="product_select_category_find" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from product
+                           where prod_category = #{param2}
+                           order by prod_regdate desc
+                        ) a
+         	      where rownum <![CDATA[<]]> ( #{param1} * 8 ) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param1} - 1) * 8 ) + 1
+	</select>
+	<select id="product_list_normal_pageData_orderby" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from product
+                           where prod_bigcategory = #{param1} 
+							order by ${param3}
+                        ) a
+         	      where rownum <![CDATA[<]]> ( #{param2} * 8 ) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param2} - 1) * 8 ) + 1
+	</select>
+	<select id="product_select_category_find_orderby" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select * 
+                            from product
+                           where prod_category = #{param3}
+                             and prod_bigcategory = #{param1}
+                           order by ${param4}
+                        ) a
+         	      where rownum <![CDATA[<]]> ( #{param2} * 8 ) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param2} - 1) * 8 ) + 1
+	</select>
+	<select id="product_list_normal_pageData_review_count_orderby" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select a.prod_code, a.prod_img,a.prod_name,a.prod_price,a.prod_discount,
+                   				 count(b.product_code) review_count
+                            from product a, review b
+                           where a.prod_code = b.product_code(+)
+                             and a.prod_bigcategory = #{param1}
+                           group by a.prod_code, a.prod_img,a.prod_name,a.prod_price,a.prod_discount
+                           order by ${param3}
+                        ) a
+         	      where rownum <![CDATA[<]]> (#{param2} * 8 ) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param2} - 1) * 8 ) + 1
+	</select>
+	<select id="product_select_category_find_review_count_orderby" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select a.prod_code, a.prod_img,a.prod_name,a.prod_price,a.prod_discount,
+                   			     count(b.product_code) review_count
+                            from product a, review b
+                           where a.prod_code = b.product_code(+)
+                             and a.prod_category = #{param3}
+                             and a.prod_bigcategory = #{param1}
+                           group by a.prod_code, a.prod_img,a.prod_name,a.prod_price,a.prod_discount
+                           order by ${param4}
+                        ) a
+         	      where rownum <![CDATA[<]]> ( #{param2} * 8 ) + 1 
+         	   )
+ 		 where r_ <![CDATA[>=]]> ((#{param2} - 1) * 8 ) + 1
+	</select>
+	<select id="home_best" resultType="com.example.java.ProductDTO">
+		select *
+  		  from ( select a.*, rownum r_
+                   from ( select a.prod_img, a.prod_code, a.prod_name, a.prod_price, a.prod_discount, 
+                   				 count(b.product_code) review_count
+                            from product a, review b
+                           where a.prod_code = b.product_code
+                           group by a.prod_img, a.prod_code, a.prod_name, a.prod_price, a.prod_discount
+                           order by count(b.product_code) desc
+                        ) a
+         	      where rownum <![CDATA[<]]> 9
+         	   )
+ 		 where r_ <![CDATA[>=]]> 1
+	</select>
+</mapper>

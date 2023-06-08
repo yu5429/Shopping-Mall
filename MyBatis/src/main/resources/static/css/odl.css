@@ -1,0 +1,127 @@
+legend {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+h3 {
+	width: fit-content;
+}
+h3:after {
+	content: "";
+    display: block;
+    height: 5px;
+    margin:-2px 0 0 0;
+    background: moccasin;
+    margin-bottom: 10px;
+}
+th {
+	background: #f9f9f9
+} 
+#div1-1 {
+	width: fit-content;
+}
+#div1-1:after{
+    content: "";
+    display: block;
+    height: 5px;
+    margin: 0;
+    background: moccasin;
+    margin-bottom: 10px;
+}
+
+#order_status {
+    height: 40px;
+    padding: 0 30px 0 12px;
+    margin: 0 0 10px 0;
+    border: 1px solid #eaeaea;
+    font-size: 100%;
+    color: #353535;
+    cursor: pointer;
+}
+#order_search_btn {
+	width: 100px;
+	height: 40px;
+	border: 1px solid #ebebeb;
+	background: linear-gradient(to bottom,#ffffff 40%,#f6f6f6 100%);
+	font-size: 13px;
+	padding: 0 19px;
+	cursor: pointer;
+}
+#fs1-1 {
+	padding: 20px;
+    border: 5px solid gray;
+    color: #404040;
+    min-inline-size: min-content;
+    width: 75%;
+}
+#div6-1 ul {
+    display: inline-block;
+    padding: 0;
+    list-style-type: disc;
+}
+#div6-1 ul li {
+	display: inherit;
+	padding: 0;
+	margin: 0 5px;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.datebtn {
+	color: #333;
+	border: 1px solid #ebebeb;
+	background: linear-gradient(to bottom,#ffffff 40%,#f6f6f6 100%);
+	font-size: 13px;
+	height: 40px;
+	margin: 0 0 10px 0;
+	padding: 0 19px;
+	cursor: pointer;
+}
+
+.calender {
+	width: 140px;
+    height: 40px;
+    padding: 0 30px 0 12px;
+    border: 1px solid #eaeaea;
+    font-size: 100%;
+    color: #353535;
+    cursor: pointer;
+}
+#order_list {
+	text-align: center;
+}
+.item1:before {
+    content: '';
+}
+.item2:before {
+    content: '';
+}
+.item3:before {
+    content: '';
+}
+.div6-1 {
+	display: none;
+	text-align: center;
+}
+.page {
+	font-weight: 700;
+	cursor: pointer;
+}
+#table_orderList {
+	width: 90%;
+	text-align: center;
+	border-collapse: collapse;
+}
+#table_orderList tr:hover td{
+	background-color: #eef7ff;
+}
+.odl_a{
+	text-decoration: none;
+	color: black;
+}

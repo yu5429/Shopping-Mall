@@ -1,0 +1,198 @@
+article {
+	width: fit-content;
+	margin: 0 auto 100px auto;
+}
+h3 {
+	text-align: left;
+}
+
+.tblprice, .tblbasket {
+  border-collapse: collapse;
+  text-align:center;
+  margin-left: 50px;
+  width:900px;
+  
+}  
+.tblprice, .tblbasket th {
+  padding: 10px;
+  color: #168;
+  border-bottom: 3px solid #168;
+}
+
+.tblprice, .tblbasket td {
+  color: #669;
+  padding: 30px;
+  border-bottom: 1px solid #ddd;
+  font-size:20px;
+}
+.tblprice,.tblbasket tr:hover td {
+  color: #004;
+}
+.tblprice{
+	margin-left:50px; 
+  	margin-right:auto;
+  	margin-top:20px;
+}
+.h1_basketTitle{
+	font-size:30px;
+	margin-top:50px;
+	margin-left:25px;
+}
+.h3_basketSubTitle{
+	font-size:20px;
+	margin-left:50px;
+	text-align: left;
+}
+.h3_basketSubTitle:after {
+	content: "";
+    display: block;
+    width: 120px;
+    height: 5px;
+    margin:2px 0 0 1px;
+    background: moccasin;
+}
+#allselect{
+	margin-left: 30px;
+  	width:200px;
+  	height:50px;
+  	top: 1px;
+  	margin-top:20px;
+	text-decoration: none;
+	position: relative;
+    background: linear-gradient(to bottom,#ffffff 40%,#f6f6f6 100%);
+    border: solid 1px #ebebeb;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#delete{
+    padding: 10px;
+    position: relative;
+	background-color: #000000;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#div_explain {
+	position: relative;
+	width: 100%;
+	text-align: right;
+	margin-bottom: 6px;
+	padding-right: 6px;
+}
+
+.tblbasket,.tblprice{
+	border: 1px solid #ddd;
+}
+.tblbasket td,.tblprice td{
+	border: 1px solid #ddd;
+	padding:10px 0 10px 0;
+}
+.tblbasket th,.tblprice th{
+	padding:10px 0 10px 0;
+}
+.basket_quantity,.odt_quantity{
+	text-align:center;
+}
+#cancel{
+	padding: 10px;
+    position: relative;
+	background-color: #000000;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+#table_orderDetail{
+	margin-top:15px;	
+}
+
+
+
+/*주소*/
+.h3_odt:after {
+	content: "";
+    display: block;
+    width: 16%;
+    height: 5px;
+    margin: -2px 0 0 0;
+    background: moccasin;
+    margin-bottom: 10px;
+}
+.table_orderInfo td {
+	position: relative;
+	border: solid 1px black;
+	width: 400px;
+	height: fit-content;
+	padding: 20px;
+	text-align: left;
+}
+
+.table_orderInfo th {
+	border: solid 1px black;
+	width: 130px;
+	height: fit-content;
+}
+.input_order {
+	position: relative;
+	width: 250px;
+	height: 25px;
+}
+
+#input_deliveryDM{
+	width: 300px;
+	height: 100px;
+}
+.button_findPostcode {
+	position: absolute;
+	top: 20px;
+	left: 300px;
+	width: 60px;
+	height: 100px;
+}
+.input_Phone::-webkit-outer-spin-button,
+.input_Phone::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input_Phone {
+	width: 62px;
+	height: 25px;
+	text-align: center;
+}
+.pre_checkMessage {
+	position: relative;
+	left: 25px;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.button_style{
+	width: 120px;
+    height: 40px;
+    line-height: 38px;
+    color: black !important;
+    border: 1px solid #ccc;
+    background-color:#eef7ff;
+}
+.div_Button{
+	text-align:center;
+	padding:20px 0 20px 0;
+}
+
+/*order_detail_paid*/
+.p_order_detail_paid{
+	font-size:20px;
+	margin-left: 30px;
+}

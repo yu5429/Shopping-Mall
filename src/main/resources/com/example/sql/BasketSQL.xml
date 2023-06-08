@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.java.BasketDAO">
+	<select id="basket_list" resultType="com.example.java.BasketDTO">
+		select b_img,b_title,b_price,b_count,b_df,bsk_seq,nickname
+		from basket
+		where nickname = #{param1}
+		order by b_df
+	</select>
+	<delete id="basket_delete">
+		delete from basket where bsk_seq = #{param1}
+	</delete>
+	<delete id="basket_selectDelete"> 
+		delete from basket 
+		where bsk_seq = #{param1}
+	</delete>
+	<select id="basket_addSelectItem" resultType="com.example.java.BasketDTO">
+		select *
+		from basket
+		where bsk_seq = #{param1}
+	</select>
+	<update id="basket_changeQuantity">
+		update basket
+		set
+			b_count = #{param1}
+		where bsk_seq = #{param2}
+	</update>
+	<insert id="basket_insert">
+		insert into basket
+		values (#{param1},#{param2},#{param3},#{param4},#{param5},bsk_seq.nextval,#{param6})
+	</insert>
+</mapper>

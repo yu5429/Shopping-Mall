@@ -1,0 +1,96 @@
+h1 {
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+	display: flex;
+	padding: 0;
+	justify-content: center;
+}
+li {
+	padding: 0 10px;
+}
+section, footer {
+	top: 0px;
+}
+#member_Dlg{
+	background-color:#FFFFFF;	
+}
+#member_Dlg td{
+	width:500px;
+}
+#member_management{
+	border: 1px #F6F1E9 solid;
+	font-size: .9em;
+  	box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  	width: 100%;
+  	border-collapse: collapse;
+  	border-radius: 5px;
+  	overflow: hidden;
+	text-align:center;
+}
+#member_management th{
+	background:#BACDDB;
+	height:50px;
+}
+#member_management td{
+	height:50px;
+}
+#input_search{
+	height:40px;
+	width:200px;
+	background-position:left center;
+	margin-right: 10px;
+	padding-left:40px;
+	background-size:20px;
+	background-repeat:no-repeat;
+}
+#search {
+	position: relative;
+	text-align: right;
+	margin: 0 0 20px 0;
+}
+.hidden {
+	display: none;
+}
+.modal_input {
+	position: absolute;
+	left: 100px;
+}
+.border {
+	border: none;
+	outline: none;
+}
+#buttons {
+	position: absolute;
+	width: fit-content;
+	top: 45%;
+	left: 50%;
+}
+#buttons > button {
+	margin: 0 10px;
+	height: 30px;
+}
+#email_check {
+	position: relative;
+	top: 7px;
+	left: 83px;
+	width: fit-content;
+	font-size: 12px;
+	margin: 0;
+}
+.ptext {
+	margin-top: 5px;
+}
+#ul_pagenation {
+	margin-top: 10px;
+}
+#button_home {
+    width: 120px;
+    height: 40px;
+    line-height: 38px;
+    color: black !important;
+    border: 1px solid #ccc;
+    background-color: #eef7ff;
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.InquiryDAO">
+	<select id="inquiryList" resultType="com.example.java.InquiryDTO">
+		select *
+			from	(select a.*, rownum r
+    				from	(select a.*, b.prod_img 
+    						from inquiry a, product b
+    						where a.inquiry_product = b.prod_code(+)
+    						order by inquiry_no desc) a
+   					where rownum <![CDATA[<]]> ((#{param1} * 10) + 1) )
+			where r <![CDATA[>=]]> ((#{param1} - 1) * 10) + 1
+	</select>
+	<select id="get_count" resultType="_int">
+		<![CDATA[
+		select count(*)
+		from inquiry
+		]]>
+	</select>
+	<select id="find_password" resultType="string">
+		select inquiry_password from inquiry 
+		where inquiry_no = #{param1}
+	</select>
+	<select id="inquiryView" resultType="com.example.java.InquiryDTO">
+		select * from inquiry
+		where inquiry_no = #{param1}
+	</select>
+	<update id="updateReadcount">
+		update inquiry set inquiry_readcount=inquiry_readcount+1 where inquiry_no=#{param1}
+	</update>
+	<insert id="inquiryinsert">
+		insert into inquiry values(
+		inquiry_no.nextval,#{param1},#{param2},#{param3},to_Char(sysdate,'YYYY-MM-DD HH:mi'),
+		0,#{param4},#{param5},to_Char(sysdate,'YYYY-MM-DD HH:mi'), #{param6})
+	</insert>
+	<update id="inquiryupdate">
+		update inquiry set
+		inquiry_title=#{param2},inquiry_content=#{param3},
+		inquiry_updated=to_Char(sysdate,'YYYY-MM-DD HH:mi')
+		where inquiry_no=#{param1}
+	</update>
+	<delete id="inquirydelete">
+		delete from inquiry where inquiry_no=#{param1}
+	</delete>
+	<update id="makeSpace_forResponse">
+		update inquiry
+		set inquiry_no = inquiry_no + 1
+		where inquiry_no <![CDATA[>]]> #{param1}
+	</update>
+	<insert id="insertResponse">
+		insert into response
+		values (
+			#{param1},#{param2},#{param3},'관리자',to_Char(sysdate,'YYYY-MM-DD HH:mi'),
+			to_Char(sysdate,'YYYY-MM-DD HH:mi')
+		)
+	</insert>
+	<select id="alreadyResponse" resultType="_int">
+		select count(*)
+		from response
+		where inquiry_no = #{param1}
+	</select>
+	<select id="getResponse" resultType="com.example.java.InquiryDTO">
+		select *
+		from response
+		where inquiry_no = #{param1}
+	</select>
+	<select id="checkBeforeUpdateR" resultType="_int">
+		select count(*)
+		from response
+		where inquiry_no = #{param1}
+	</select>
+	<update id="updateResponse">
+		update response
+		set
+			response_title = #{param2},
+			response_content = #{param3},
+			response_updated = to_Char(sysdate,'YYYY-MM-DD HH:mi')
+		where inquiry_no = #{param1}
+	</update>
+	<delete id="deleteResponse">
+		delete response
+		where inquiry_no = #{param1}
+	</delete>
+	<select id="taggingResponse" resultType="_int">
+		select count(*)
+		from response
+		where inquiry_no = #{param1}
+	</select>
+	<select id="inquiry_getpc" resultType="com.example.java.InquiryDTO">
+		select * 
+		from product 
+		where prod_code = #{param1}
+	</select>
+</mapper>

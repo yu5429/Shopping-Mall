@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.java.NoticeDAO">
+	<select id="show_notice" resultType="com.example.java.NoticeDTO">
+		<![CDATA[
+		select * 
+		from (select a.*, rownum r_
+			from (select * 
+					from notice 
+					order by w_num desc) a 
+			where rownum < (#{param1}*5)+1)
+		where r_ >= ((#{param1}-1)*5)+1
+		]]>
+	</select> 
+	<select id="notice_all_count" resultType="int">
+	    SELECT COUNT(*) 
+	    FROM notice
+    </select>
+	<insert id="write_notice">
+	    insert into notice(w_num, w_writer, w_title, w_content, w_date, w_views) 
+	    values (w_num.nextval, '관리자', #{param1}, #{param2}, to_char(sysdate, 'YYYY-MM-DD HH24:mi'), 0)
+    </insert>
+    <select id="view_notice" resultType="com.example.java.NoticeDTO">
+		select * 
+		from notice 
+		where w_num = #{param1} 
+	</select>
+	<update id="update_viewCount">
+	    update notice 
+	    set w_views = w_views + 1 
+	    where w_num = #{param1}
+    </update>
+    <delete id="delete_notice">
+	    delete notice
+	    where w_num = #{param1}
+    </delete>
+    <update id="update_notice">
+	    update notice 
+	    set 
+		    w_title=#{param1}, 
+		    w_content=#{param2} 
+	    where w_num = #{param3}
+    </update>
+</mapper>

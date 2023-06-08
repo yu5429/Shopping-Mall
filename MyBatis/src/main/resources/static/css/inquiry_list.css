@@ -1,0 +1,114 @@
+#h1{
+	font-size:35px;
+	font-weight:bold;
+	margin-bottom:20px;
+	text-align:center;
+}
+#tblList {
+	font-size:17px;
+	text-align:center;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	table-layout: fixed;
+
+}
+#tblList th{
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#tblList th,td{
+	padding:14px 0;
+}
+
+.tblList-title{
+	width:500px;
+}
+
+#div6-1 ul {
+    display: inline-block;
+    padding: 0;
+    list-style-type: disc;
+}
+#div6-1 ul li {
+	display: inherit;
+	padding: 0;
+	margin: 0 5px;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+#li {
+	display: inline-block;
+}
+#li1-1 {
+    margin-right: 10px;
+    color: moccasin;
+    text-decoration-thickness: 3px;
+}
+#li1-2 {
+    text-decoration: none;
+}
+.div6-1 {
+	margin-top: 20px;
+}
+.page {
+	font-weight: 700;
+	cursor: pointer;
+}
+.td_title:hover{
+	font-weight:800;
+	cursor: pointer; 
+}
+.btnWrite{
+    width: 120px;
+    height: 40px;
+    line-height: 38px;
+   	margin-right: 10px;
+    
+    color: black !important;
+    border: 1px solid #ccc;
+    background-color:#eef7ff;
+}
+
+#button_write{	
+	float: right;
+	display: inline;
+}
+#btnWrite {
+	width: 100px;
+	height: 50px;
+}
+.div_tagG {
+	margin-top: 10px;
+	background-color: white;
+	border: 1px solid black;
+	color: green;
+}
+.div_tagR {
+	margin-top: 10px;
+	background-color: white;
+	border: 1px solid black;
+	color: red;
+}
+.button {
+	display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+}
+.button:hover {        
+  background-color: #808080;
+  color: #ffffff;
+  cursor: pointer;
+}
