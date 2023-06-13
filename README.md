@@ -30,7 +30,8 @@ DB 테이블 설계
 ![image](https://github.com/yu5429/Shopping-Mall/assets/123722364/f8363c4a-59b1-449c-b8b1-66702d8aa07d)
 
 ***
-담당 파트 실제 구현 이미지  
+**담당 파트 실제 구현 이미지**<br>
+
 **로그인 화면**  
 ![화면 캡처 2023-05-15 105001](https://github.com/yu5429/Shopping-Mall/assets/123722364/753dc91d-7474-452c-9655-e5ac43b8c19e)
   
