@@ -1,6 +1,6 @@
 # Shopping-Mall
 1.개발환경  
-  Eclipse, Java, Spring-boot, jQuery, Oracle SQL
+  Eclipse, Java, Spring-boot, jQuery, Mybatis, Oracle SQL
 
 2.개발기간  
 2023-03-27 ~ 2023-04-12 (3주)
