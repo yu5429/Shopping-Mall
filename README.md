@@ -32,10 +32,6 @@ DB 테이블 설계
 ***
 <br><br><br>
 **실제 구현 이미지**<br><br><br>
-
-**로그인 화면**  
-![화면 캡처 2023-05-15 105001](https://github.com/yu5429/Shopping-Mall/assets/123722364/753dc91d-7474-452c-9655-e5ac43b8c19e)
-  
 ***
 **메인 페이지**
 ![KakaoTalk_20230622_093950153](https://github.com/yu5429/Shopping-Mall/assets/123722364/ceb83ba5-1cca-47f6-9a3e-02ab7fa715eb)
@@ -45,6 +41,11 @@ DB 테이블 설계
 ![KakaoTalk_20230622_093950153_01](https://github.com/yu5429/Shopping-Mall/assets/123722364/da97b118-9bf0-492d-9c00-ea672e7f42e8)
 
 ***
+
+
+**로그인 화면**  
+![화면 캡처 2023-05-15 105001](https://github.com/yu5429/Shopping-Mall/assets/123722364/753dc91d-7474-452c-9655-e5ac43b8c19e)
+  
 **공지 게시판**
 ![image](https://github.com/yu5429/Shopping-Mall/assets/123722364/7693f4ad-c7c6-4d48-9a7b-61a82ce61bc8)
   
