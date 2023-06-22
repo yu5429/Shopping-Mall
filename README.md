@@ -1,4 +1,4 @@
-# Shopping-Mall
+# Stationery 문방구 프로젝트
 1.개발환경  
   Eclipse, Java, Spring-boot, jQuery, Mybatis, Oracle SQL
 
