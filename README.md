@@ -33,11 +33,11 @@ DB 테이블 설계
 <br><br><br>
 **실제 구현 이미지**<br><br><br>
 ***
-**메인 페이지**
+**메인 페이지**<br>
 ![KakaoTalk_20230622_093950153](https://github.com/yu5429/Shopping-Mall/assets/123722364/ceb83ba5-1cca-47f6-9a3e-02ab7fa715eb)
 
 ***
-**메인 페이지2**
+**메인 페이지2**<br>
 ![KakaoTalk_20230622_093950153_01](https://github.com/yu5429/Shopping-Mall/assets/123722364/da97b118-9bf0-492d-9c00-ea672e7f42e8)
 
 ***
