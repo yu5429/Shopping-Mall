@@ -38,11 +38,8 @@ DB 테이블 설계
 **실제 구현 이미지**<br><br><br>
 ***
 **메인 페이지**<br>
-![KakaoTalk_20230622_093950153](https://github.com/yu5429/Shopping-Mall/assets/123722364/ceb83ba5-1cca-47f6-9a3e-02ab7fa715eb)
+![KakaoTalk_20230703_170358326](https://github.com/yu5429/Shopping-Mall/assets/123722364/fcc52021-e32c-4f20-91be-39406d8d7096)
 
-***
-**메인 페이지2**<br>
-![KakaoTalk_20230622_093950153_01](https://github.com/yu5429/Shopping-Mall/assets/123722364/da97b118-9bf0-492d-9c00-ea672e7f42e8)
 
 ***
 
