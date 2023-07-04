@@ -44,24 +44,7 @@ DB 테이블 설계
 ***
 <br><br><br><br><br>
 
-**로그인 화면**  
-![화면 캡처 2023-05-15 105001](https://github.com/yu5429/Shopping-Mall/assets/123722364/753dc91d-7474-452c-9655-e5ac43b8c19e)
-  
-**공지 게시판**
-![image](https://github.com/yu5429/Shopping-Mall/assets/123722364/7693f4ad-c7c6-4d48-9a7b-61a82ce61bc8)
-  
-***
-**문의 게시판**  
-![image](https://github.com/yu5429/Shopping-Mall/assets/123722364/f9ab858a-3066-4896-8d82-9bbfd2538188)
-  
-***
-**상품 페이지 별점/리뷰**  
-![화면 캡처 2023-05-15 105258](https://github.com/yu5429/Shopping-Mall/assets/123722364/e836dfd2-5610-4865-8e1d-b0867c85f328)
-<br>
-***
-**상품 페이지(상품 이미지 미지정/기본 상태)**
-![화면 캡처 2023-05-15 105232](https://github.com/yu5429/Shopping-Mall/assets/123722364/b07f1c59-d289-4678-9621-dea0cf4b75bd)
-<br>
+
 ***
 
 **개발간의 아쉬운점/문제점**<br>
